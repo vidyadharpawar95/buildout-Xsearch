@@ -1,0 +1,193 @@
+[1691659951.829][INFO]: Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 42541
+[1691659951.829][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1691659952.075][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [  ],
+            "extensions": [  ]
+         },
+         "goog:loggingPrefs": {
+            "browser": "ALL",
+            "driver": "ALL"
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [  ],
+         "extensions": [  ]
+      },
+      "goog:loggingPrefs": {
+         "browser": "ALL",
+         "driver": "ALL"
+      }
+   }
+}
+[1691659952.079][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1691659952.079][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1691659952.081][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\vidya\AppData\Local\Temp\scoped_dir1260_1053193994" data:,
+[1691659952.678][WARNING]: This version of ChromeDriver has not been tested with Chrome version 115.
+[1691659952.683][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1691659952.992][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "115.0.5790.171",
+      "chrome": {
+         "chromedriverVersion": "114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052})",
+         "userDataDir": "C:\\Users\\vidya\\AppData\\Local\\Temp\\scoped_dir1260_1053193994"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:60925"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "webauthn:extension:prf": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "034cec76f2404e0fc825e3561e17e5e5"
+}
+[1691659953.128][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND MaximizeWindow {
+}
+[1691659953.129][INFO]: Waiting for pending navigations...
+[1691659953.133][INFO]: Done waiting for pending navigations. Status: ok
+[1691659953.254][INFO]: Waiting for pending navigations...
+[1691659953.256][INFO]: Done waiting for pending navigations. Status: ok
+[1691659953.256][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE MaximizeWindow {
+   "height": 688,
+   "width": 1296,
+   "x": -8,
+   "y": -8
+}
+[1691659953.268][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND SetTimeouts {
+   "implicit": 30000
+}
+[1691659953.268][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE SetTimeouts
+[1691659953.286][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND Navigate {
+   "url": "https://www.amazon.in/"
+}
+[1691659953.286][INFO]: Waiting for pending navigations...
+[1691659953.288][INFO]: Done waiting for pending navigations. Status: ok
+[1691659953.938][INFO]: Waiting for pending navigations...
+[1691660011.187][INFO]: Done waiting for pending navigations. Status: ok
+[1691660011.187][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE Navigate
+[1691660011.198][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "document.body.style.zoom= '0.7'"
+}
+[1691660011.198][INFO]: Waiting for pending navigations...
+[1691660011.201][INFO]: Done waiting for pending navigations. Status: ok
+[1691660011.246][INFO]: Waiting for pending navigations...
+[1691660011.382][INFO]: Done waiting for pending navigations. Status: ok
+[1691660011.382][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE ExecuteScript null
+[1691660013.403][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[text()=' Electronics ']"
+}
+[1691660013.403][INFO]: Waiting for pending navigations...
+[1691660013.410][INFO]: Done waiting for pending navigations. Status: ok
+[1691660013.452][INFO]: Waiting for pending navigations...
+[1691660013.454][INFO]: Done waiting for pending navigations. Status: ok
+[1691660013.454][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "1C7DE33E27096D5DE51C9BBED078C19A_element_76"
+}
+[1691660013.469][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND ExecuteScript {
+   "args": [ {
+      "ELEMENT": "1C7DE33E27096D5DE51C9BBED078C19A_element_76",
+      "element-6066-11e4-a52e-4f735466cecf": "1C7DE33E27096D5DE51C9BBED078C19A_element_76"
+   } ],
+   "script": "arguments[0].click() "
+}
+[1691660013.469][INFO]: Waiting for pending navigations...
+[1691660013.471][INFO]: Done waiting for pending navigations. Status: ok
+[1691660013.496][INFO]: Waiting for pending navigations...
+[1691660148.106][INFO]: Done waiting for pending navigations. Status: ok
+[1691660148.106][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE ExecuteScript null
+[1691660148.109][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND GetUrl {
+}
+[1691660148.109][INFO]: Waiting for pending navigations...
+[1691660148.110][INFO]: Done waiting for pending navigations. Status: ok
+[1691660148.117][INFO]: Waiting for pending navigations...
+[1691660148.118][INFO]: Done waiting for pending navigations. Status: ok
+[1691660148.118][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE GetUrl "https://www.amazon.in/electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics"
+[1691660148.122][INFO]: [034cec76f2404e0fc825e3561e17e5e5] COMMAND CloseWindow {
+}
+[1691660148.360][INFO]: [034cec76f2404e0fc825e3561e17e5e5] RESPONSE CloseWindow [  ]
