@@ -83,7 +83,7 @@
       }
     ],
     "error_out": "Click on a category from the navigation menu",
-    "hint": "Ensure you are clicking on the navigation menu bar item \"Electronics\""
+    "hint": "Ensure you are clicking on the navigation menu bar item \"mobile\""
   },
   {
     "description": "TestCase03: Verify the navigation menu",
@@ -96,11 +96,11 @@
       {
         "object_notation": "RESPONSE",
         "operator": "contains",
-        "expected_value": "electronic"
+        "expected_value": "mobile"
       }
     ],
     "error_out": "Assert that the resulting page corresponds to the clicked category",
-    "hint": "Ensure you are checking the url of the page for \"Electronics\""
+    "hint": "Ensure you are checking the url of the page for \"mobile\""
   }
 ]
 }

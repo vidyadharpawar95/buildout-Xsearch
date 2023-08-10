@@ -1,17 +1,16 @@
-
 package apTests;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
-//Selenium Imports
+
 import java.util.logging.Level;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -56,49 +55,67 @@ public class TestCases {
     public void testCase01() {
         System.out.println("Start Test case: testCase01");
         driver.get("https://www.amazon.in/");
-        System.out.println("The Url is"+driver.getCurrentUrl());
+        String title = driver.getCurrentUrl();
+        if (title.contains("amazon")) {
+            System.out.println("url contains expected title");
+        } else {
+            System.out.println("url not contains expected title");
+        }
+
         System.out.println("end Test case: testCase01");
     }
 
-     public void testCase02() {
+    public void testCase02() {
         System.out.println("Start Test case: testCase02");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://www.amazon.in/");
-        WebElement search = driver.findElement(By.id("twotabsearchtextbox"));
-        search.sendKeys("laptop");
-        Actions act = new Actions(driver);
-        act.sendKeys(Keys.ENTER).perform();
-
-        List<WebElement>lap=driver.findElements(By.xpath("//span[contains(text(),'Laptop')]"));
-        for(int i=0;i<lap.size();i++){
-            if(lap.get(i).getText().contains("Laptop")){
-                System.out.println("Found laptop in a search="+i);
+        WebElement searchBar = driver.findElement(By.id("twotabsearchtextbox"));
+        searchBar.sendKeys("laptop");
+        searchBar.submit();
+        List<WebElement> laptopTextElements = driver.findElements(By.xpath("//span[contains(text(),'Laptop')]"));
+        boolean searchItemFound = false;
+        for (WebElement product : laptopTextElements) {
+            if (product.getText().toLowerCase().contains("laptop")) {
+                searchItemFound = true;
                 break;
             }
         }
+        if (searchItemFound) {
+            System.out.println("Search Term Found in Product Titles  >> Test Case Passed ");
+        } else {
+            System.out.println("Search Term Not Found in Product Titles >>Test Case Failed ");
+        }
+
         System.out.println("end Test case: testCase02");
     }
 
-
-     public void testCase03() throws InterruptedException {
+    public void testCase03() throws InterruptedException {
         System.out.println("Start Test case: testCase03");
         driver.get("https://www.amazon.in/");
+    //      JavascriptExecutor js=(JavascriptExecutor)driver;
+    //     js.executeScript("document.body.style.zoom= '0.7'");
+    //     Thread.sleep(2000);
+    //    WebElement ele= driver.findElement(By.xpath("//a[text()='Mobiles']"));
+    //     js.executeScript("arguments[0].click() ", ele);
+    //     String url = driver.getCurrentUrl();
+    //     if (url.toLowerCase().contains("mobiles")) {
+    //         System.out.println("URl contains Electronics word  >> Test Case Passed");
+    //     } else {
+    //         System.out.println("URl not contains Electronics word >> Test Case Failed");
+    //     }
 
-        JavascriptExecutor js=(JavascriptExecutor)driver;
-        js.executeScript("document.body.style.zoom= '0.7'");
-        Thread.sleep(2000);
-       WebElement ele= driver.findElement(By.xpath("//*[text()=' Electronics ']"));
-      
-       js.executeScript("arguments[0].click() ", ele);
-        String url= driver.getCurrentUrl();
-        System.out.println("URL="+url);
-        if(url.toLowerCase().contains("electronics")){
-            System.out.println("Url coontains the electronics word--> Test Case is Passed");
-        }else{
-            System.out.println("Url do not contains electronics word --> Test Case Failed");
-        }
-        System.out.println("end Test case: testCase03");
+    WebElement mobiles = driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[5]"));
+   mobiles.click();
+    
+    if(driver.getCurrentUrl().contains("mobile"))
+    {
+        System.out.println("Found mobile and navigated to it");
     }
+    else
+    {
+        System.out.println("Not found mobile");
+    }
+     System.out.println("end Test case: testCase03");
 
 }
 
+}
